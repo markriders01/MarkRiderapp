@@ -1,0 +1,8 @@
+{
+  "name": "Mark Rider",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

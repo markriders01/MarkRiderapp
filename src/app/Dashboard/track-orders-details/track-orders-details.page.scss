@@ -1,0 +1,67 @@
+.tracking_order_details_box {
+
+    background: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 20px;
+    padding: 20px;
+    border-radius: 3px;
+
+}
+
+.tracking_order_details_title {
+
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+}
+
+.tracking_order_details_phone {
+
+    padding-top: 5px;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 300;
+
+}
+
+.tracking_order_details_time {
+
+    font-size: 12px;
+    color: #fff;
+    font-weight: 300;
+
+}
+
+ion-icon.control_small_ic {
+
+    vertical-align: middle;
+    padding-right: 5px;
+
+}
+
+ion-button.tracking_order_details_btn {
+
+    width: 50px;
+    height: 50px;
+    --background: #fff;
+    color: #ffa500;
+    --box-shadow: none;
+    --border-radius: 50px;
+    margin-top: 20px;
+
+}
+
+agm-map {
+    height: 700px;
+  }
+
+  .more-details {
+    color: aliceblue;
+    font-size: 12px;
+    text-decoration: underline;
+  }

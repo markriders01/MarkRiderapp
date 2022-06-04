@@ -1,0 +1,130 @@
+.small_footer_note_3 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #000;
+    font-weight: 400;
+}
+
+.small_footer_note_2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 11px;
+    margin-bottom: 10px;
+    color: #707070;
+    font-weight: 300;
+}
+
+.location_text {
+    color: #000;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+ion-icon.location-outline-icon {
+    font-size: 29px;
+}
+
+ion-icon.location-outline-icon {
+    color: #EBEBEB;
+}
+
+ion-icon.location-outline-icon.active {
+    color: #707070;
+}
+
+.handle_address_border {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.the_address_row_handle{
+    // margin-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #eeeded;
+    padding-bottom: 10px;
+}
+
+.the_address_row_handle:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.header_style_3 {
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.log_out_text {
+    // margin-bottom: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(202, 200, 200);
+    cursor: pointer;
+}
+
+.log_out_text.ion-text-center ion-icon {
+    font-size: 20px;
+    vertical-align: bottom;
+    padding-right: 5px;
+}
+
+.display_block{
+    display: block;
+}
+ion-item {
+
+    border: 1px solid #C8C8C8;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #707070 !important;
+    padding-top: 0px;
+    padding-bottom: 0 !important;
+    height: 54px;
+    --highlight-height: 0;
+
+}
+.menu_user_meta_link {
+    font-size: 11px;
+    font-weight: 300;
+    padding-top: 5px;
+    color: #ffa500;
+    cursor: pointer;
+  }
+  
+  .menu_user_meta_name {
+    color: #707070;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .menu_user_meta {
+    padding: 20px 0;
+    border-bottom: 1px solid #ebebeb;
+  }
+  
+  .manage_profile_width {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+  .file-upload {
+      width: 30px;
+      margin-top: 7px;
+      opacity: 0;
+  }
+
+  // .file-upload {
+//   position: absolute;
+//   margin-top: 40px;
+//   width: 60px;
+//   opacity: 0;
+//   // margin-left: -30px;
+// }

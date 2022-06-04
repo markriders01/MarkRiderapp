@@ -1,0 +1,232 @@
+<!-- <app-header-two [title]="'Orders Summary'"></app-header-two> -->
+
+<ion-header>
+  <ion-toolbar class="ion-text-center ion-no-border">
+    <ion-buttons slot="start" class="back-btn">
+      <ion-back-button defaultHref="/dashboard/track-orders-details"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- <ion-content class="ion-no-padding gray_background">
+
+  <div class="orders_history_title">Order Id: PA-908787</div>
+  <div class="content_padded">
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="12">
+          <div class="shipment-div">
+            <div (click)="gotoOrderDetails(1)" class="address-div">
+              <div class="the_wallet_item_list ion-activatable ripple-parent">
+                <ion-row>
+                  <ion-col size="12">
+                    <div class="wallet_transaction_ref_date">
+                      Idodo Street, Ketu
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-ripple-effect></ion-ripple-effect>
+                <ion-row>
+                  <ion-col size="12">
+                    <div class="wallet_transaction_ref_date2" >
+                      <ion-icon name="location-outline"></ion-icon>
+                      13, Akintola Street, off Idodo Street, Ketu
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </div>
+            </div>
+  
+            <div (click)="gotoOrderDetails(2)" class="wallet_transaction_recrods">
+              <div class="the_wallet_item_list ion-activatable ripple-parent">
+                <ion-row>
+                  <ion-col size="8">
+                    <div class="wallet_transaction_ref_number">
+                      5 Boxes of chocolate 
+                    </div>
+                    <div class="wallet_transaction_status_text">
+                        Right Away
+                    </div>
+                  </ion-col>
+                  <ion-col size="4" class="ion-text-right">
+                    <div class="wallet_transaction_amount">
+                      N1,000
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="8">
+                    <div class="wallet_transaction_ref_number">
+                      5 Boxes of chocolate 
+                    </div>
+                    <div class="wallet_transaction_status_text">
+                        Right Away
+                    </div>
+                  </ion-col>
+                  <ion-col size="4" class="ion-text-right">
+                    <div class="wallet_transaction_amount">
+                      N1,000
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="8">
+                    <div class="wallet_transaction_ref_number">
+                      5 Boxes of chocolate 
+                    </div>
+                    <div class="wallet_transaction_status_text">
+                        Right Away
+                    </div>
+                  </ion-col>
+                  <ion-col size="4" class="ion-text-right">
+                    <div class="wallet_transaction_amount">
+                      N1,000
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-ripple-effect></ion-ripple-effect>
+  
+              </div>
+             
+            </div>
+          </div>
+          
+          <div (click)="gotoOrderDetails(1)" class="address-div">
+            <div class="the_wallet_item_list ion-activatable ripple-parent">
+              <div class="price-section">
+                <h5>Total:</h5>
+                <p>8000</p>
+              </div>
+            </div>
+          </div>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="pawa2_u_checkout_btn_actions">
+      <ion-button (click)="trackShipment()" class="pawa2_u_action_btn_2">
+        Track Shipment
+      </ion-button>
+    </div>
+  </div>
+</ion-content> -->
+
+<ion-content class="ion-no-padding gray_background">
+
+  <!-- <div class="orders_history_title">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <div class="orders_histroy_title_left ion-text-left">
+            <b>Order:</b> PA-9344
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <div class="orders_history_title_right ion-text-right">
+            2020-03-06
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div> -->
+  <div class="content_padded">
+    <ion-grid>
+      <ion-row *ngFor="let detail of trackingdetails">
+        <ion-col size="12">
+          <div class="wallet_transaction_recrods">
+            <div class="the_wallet_item_list">
+              <ion-row>
+                <ion-col size="12">
+                  <div class="wallet_transaction_ref_date">
+                    Pick-up Address 
+                  </div>
+                  <div class="wallet_transaction_ref_date_2">
+                    {{detail.deliveryLocation.baseAddress}}
+                    <ion-icon class="copy" name="copy" (click)="writeToClipboard(detail.deliveryLocation.baseAddress)"></ion-icon>
+                  </div>
+                  <div class="wallet_transaction_ref_date">pick-up Phone Number</div>
+                  <div class="wallet_transaction_ref_date_2">
+                  <a href="{{detail.pickUpPhone}}">
+                    {{detail.pickUpPhone}}
+                  </a>
+                  <ion-col size="3">
+                      <ion-icon class="tracking_order_details_btn_icon" name="call-outline"></ion-icon>
+                  </ion-col>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+            <div class="the_wallet_item_list">
+              <ion-row>
+                <ion-col size="12">
+                  <div class="wallet_transaction_ref_date">
+                    Delivered to
+                  </div>
+                  <div class="wallet_transaction_ref_date_2">
+                    {{detail.deliveryLocation.targetAddress}}
+                    <ion-icon class="copy" name="copy" (click)="writeToClipboard(detail.deliveryLocation.targetAddress)"></ion-icon>
+                  </div>
+                   <div class="wallet_transaction_ref_date">Drop-off Phone Number</div>
+                  <div class="wallet_transaction_ref_date_2">
+                    <a href="tel:{{detail.dropOffPhone}}">
+                      {{detail.dropOffPhone}}
+                    </a>
+                    <ion-col size="3">
+                          <ion-icon class="tracking_order_details_btn_icon" name="call-outline"></ion-icon>
+                    </ion-col>
+                  </div>
+                </ion-col>
+
+              </ion-row>
+            </div>
+
+          </div>
+        </ion-col>
+
+        <ion-col size="12">
+          <div class="cart_list_items">
+            <ion-list lines="none" class="order_details_item_list">
+              <ion-item class="order_details_item_box">
+      
+                <ion-grid class="checkout_ctr_box">
+                  <ion-row>
+  
+                    <ion-col size="4">
+                      <div class="cart_list_item_image" style="
+                        background: url('../../../assets//images/macriders/m2.png');
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 5px;
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                      ">
+                      </div>
+                    </ion-col>
+                    
+                    <ion-col size="8">
+                      <div class="checkout_item_text_1">
+                        Item Details
+                      </div>
+                      <div class="checkout_item_text_2">
+                        {{detail.pickUpItems}}
+                      </div>
+                      <!-- <div class="checkout_item_price">
+                        N 10,000
+                      </div> -->
+    
+                    </ion-col>
+                   
+                  </ion-row>
+                </ion-grid>
+              </ion-item>
+            </ion-list>
+          </div> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </div>
+</ion-content>
